@@ -33,5 +33,5 @@ This project is a creative take on the classic fortune cookie concept. Built as 
 
 ## 🚀 Try It Out
 
-[🔗 Live Demo](#) *(add your GitHub Pages link here)*
+[🔗 Live Demo:  https://saniya-firdouss.github.io/Fortune-Cookies/ ] 
 [📁 View the Code](https://github.com/saniya-firdouss/Fortune-Cookies/tree/main) 
