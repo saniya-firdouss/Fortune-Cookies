@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fortune Cookies</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+ <div class="content">
+    
+  <main> <!--main background-->
+    <img src="images/main-bg.png" alt="" class="main-bg">   <!-- main-bg paper img-->
+    <img src="images/stamp.png" alt=""  class="stamp-img">  <!--stamp img-->
+    <img src="images/vintage.png" alt="" class="vintage1">  <!--vintage paper img on top-left-->
+    <img src="images/vintage.png" alt="" class="vintage2">  <!-- vintage paper img on bottom-right-->
+    <img src="images/flower.png" alt="" class="flower1">    <!-- bouquet img on bottom-left-->
+    <img src="images/flower.png" alt="" class="flower2">    <!-- bouquet img on top-right-->
+    <img src="images/quote.png" alt="" class="main-text">    <!--This is Main Text image, i did'nt use font because i already found this on canva -->
+    <audio src="audio/royal-fanfare-with-a-synth-87146 (1).mp3" id="Txt-bg-music" ></audio> 
+    <img src="images/left.png" alt="" class="left-sparkle" id="sparkleL">
+
+    <img src="images/right.png" alt="" class="right-sparkle" id="sparkleR">
+  </main>
+  <!--cookie container-->
+   <div class="cookie-container">
+    <img src="images/cookie.png" alt="" id="cookie-whole" />
+    <img src="images/left-half-cookie.png" alt="" id="cookie-left" class="hidden"/>
+    <img src="images/right-half-cookie.png" alt="" id="cookie-right" class="hidden"/>
+   </div>
+  <!--Fortune disclose here-->
+    <div class="fortune-msg hidden2">
+      <div class="scroll-text-container ">
+        <img src="images/scroll.png" alt="" class="scroll-paper " >
+        <div class="quotes hidden2" id="quote"></div>
+      </div>
+       <button class="reset-btn hidden2" id="reset" onclick="resetFortune()" >Try Again</button>
+    </div>
+
+    <script src="script.js"></script>
+</div>    
+</body>
+</html>

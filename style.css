@@ -1,0 +1,405 @@
+ body {
+  padding: 0;
+  margin: 0;
+  background: linear-gradient(
+    135deg,
+    #b69b7b,
+    #e8c9ba 25%,
+    #f2e0b6 50%,
+    #f7d5d0 75%,
+    #bfa37b
+  );
+  
+  min-height: 100vh;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* VINTAGE PAPER HERE*/
+.vintage1 {
+  --start-transform:  translateX(-30px);
+  --end-transform: translateX(5px);
+  animation: vintageFadeIn 2s ease-out forwards;
+
+   position: fixed;
+   top: -140px;
+   left: -600px;
+   width: 100%;
+   height: fit-content;
+   z-index: 199;
+   pointer-events: none;
+
+}
+
+.vintage2 {
+  --start-transform:  translateX(30px) rotate(180deg);
+  --end-transform: translateX(-5px) rotate(180deg);
+  animation: vintageFadeIn 2s ease-out forwards;
+
+    position: fixed;
+    bottom: -120px;
+    right: -640px;
+    width: 100%;
+    height: fit-content;
+    z-index: 199;
+    pointer-events: none;
+ 
+ }
+ @keyframes
+  vintageFadeIn {
+     0% {
+         opacity: 0;
+         transform: var(--start-transform) ;
+       }
+       100% {
+         opacity: 1;
+         transform:var(--end-transform)  ;
+       } 
+ }
+
+/*FLOWER 2 HERE*/ 
+.flower1 {
+  --start-rotate: -5deg;
+  --mid-rotate: 3deg;
+  --end-rotate: 0deg;
+
+    position: fixed;
+    bottom: -250px;
+    left: -400px;
+    z-index: 200;
+    max-width: 80%;
+    height: auto;
+    pointer-events: none;
+    animation: bouquetEntrance 2s ease-out forwards;
+}
+
+@keyframes bouquetEntrance {
+  0% {
+    opacity: 0;
+    transform: translateY(30px) rotate(var(--start-rotate));
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(-5px) rotate(var(--mid-rotate));
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px) rotate(var(--end-rotate));
+  }
+}
+/* FLOWER 2 HERE*/ 
+.flower2 {
+  --start-rotate: 175deg;
+  --mid-rotate: 183deg;
+  --end-rotate: 180deg;
+
+    position: fixed;
+    top: -250px;
+    right: -400px;
+    z-index: 200;
+    width: 80%;
+    height: auto;
+    pointer-events: none;
+    animation: bouquetEntrance 2s ease-out forwards;
+}
+
+/*Main background Paper sheet here */
+.main-bg {
+    position: fixed;
+    pointer-events: none;
+    width: 80%;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: fadeIn 1s ease-out forwards;
+}
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.9);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+/* STAMP COMES HERE*/
+.stamp-img {
+    position: absolute;
+    width: 300px;
+    height: auto;
+    z-index: 200;
+    top: 10%;
+    left: 8%;
+    pointer-events: none;
+    animation: bounceIn 2s ease-out forwards;
+}
+
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    transform: translateY(30px) rotate(-5deg) rotate(0deg);
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(-5px) rotate(3deg) rotate(0deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px) rotate(0deg) rotate(0deg);
+  }
+}
+
+
+/* Main Text here*/ 
+.main-text {
+  position: absolute;
+  pointer-events: none;
+  width: 50%;
+  height: auto;
+  z-index: 200;
+  top: 50%;
+  left: 50%;
+  opacity: 0;
+  animation: 
+      textPopUp 1s ease-out 1.5s forwards,
+      textFadeOut 0.5s ease-in 4s forwards;
+    }
+
+
+    @keyframes textPopUp {
+    0% {
+      opacity: 0;
+      transform: translate(-50%, -50%) scale(0.5);
+    }
+   100% {
+    opacity: 1;
+    transform:translate(-50%, -50%) scale(1);
+   }
+}
+@keyframes textFadeOut {
+  to {
+    opacity: 0;
+  }
+}
+
+/* SPARKLE HERE*/
+.left-sparkle {
+  position: absolute;
+  pointer-events: none;
+  width: 20%;
+  height: auto;
+  z-index: 200;
+  top: 30%;
+  left: 0%;
+  display: none;
+  animation: sparklePopUp 1s ease-out  infinite;
+}
+.right-sparkle {
+  position: absolute;
+  pointer-events: none;
+  width: 20%;
+  height: auto;
+  z-index: 200;
+  top: 40%;
+  right: 0%;
+  display: none;
+  animation: sparklePopUp 1s ease-out  infinite;
+
+}
+
+@keyframes sparklePopUp {
+  0% {
+    transform: scale(0.5);
+  }
+  50% {
+  transform: scale(1);
+  }
+  100% {
+    transform: scale(0.5);
+  }
+}
+
+
+/*COOKIE ANIMATION FROM HERE*/
+
+.cookie-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 500px; 
+  height: 500px;
+  opacity: 0;
+  pointer-events: auto;
+  transform: translate(-50%, -50%);
+  z-index: 100; 
+  animation: cookieFadeIn 1s ease-out 4s forwards;
+}
+
+@keyframes cookieFadeIn {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+.cookie-container img {
+  width: 500px;
+  top: 90px;
+  left: 0;
+  position: absolute;
+  height: auto;
+
+
+}
+
+
+.shake {
+  animation: shake 2.5s ease-in-out;
+}
+
+@keyframes shake {
+  0% { transform: scale(1) rotate(0deg); }
+  10% { transform: scale(1.08) rotate(6deg); }
+  20% { transform: scale(0.92) rotate(-6deg); }
+  30% { transform: scale(1.06) rotate(4deg); }
+  40% { transform: scale(0.94) rotate(-4deg); }
+  50% { transform: scale(1.05) rotate(3deg); }
+  60% { transform: scale(0.95) rotate(-3deg); }
+  70% { transform: scale(1.03) rotate(2deg); }
+  80% { transform: scale(0.97) rotate(-2deg); }
+  90% { transform: scale(1.01) rotate(1deg); }
+  100% { transform: scale(1) rotate(0deg); }
+}
+
+
+
+
+.hidden {
+  display: none;
+}
+
+.crack-left {
+  animation: crackLeft 0.6s ease-out forwards;
+}
+@keyframes crackLeft {
+  0%   { transform: translate(0, 0) rotate(0deg); }
+  20%  { transform: translate(-10px, -5px) rotate(-10deg); }
+  40%  { transform: translate(-25px, 5px) rotate(-15deg); }
+  60%  { transform: translate(-35px, -10px) rotate(-20deg); }
+  80%  { transform: translate(-40px, 0) rotate(-18deg); }
+  100% { transform: translate(-50px, 5px) rotate(-15deg); }
+}
+
+.crack-right {
+  animation: crackRight 0.6s ease-out forwards;
+}
+@keyframes crackRight {
+  0%   { transform: translate(0, 0) rotate(0deg); }
+  20%  { transform: translate(10px, -5px) rotate(10deg); }
+  40%  { transform: translate(25px, 5px) rotate(15deg); }
+  60%  { transform: translate(35px, -10px) rotate(20deg); }
+  80%  { transform: translate(40px, 0) rotate(18deg); }
+  100% { transform: translate(50px, 5px) rotate(15deg); }
+}
+
+/*FORTUNE MESSEGE HERE*/
+.scroll-text-container {
+  position: relative;
+  display: inline-block;
+}
+.fortune-msg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 250;
+  text-align: center;
+}
+.scroll-paper {
+  pointer-events: none;
+  width: 800px;
+  animation: scrollPopUp ease-out 1s forwards;
+}
+@keyframes scrollPopUp {
+  0% {
+    transform: scale(0.4) ;
+  }
+  100% {
+    transform: scale(1) ;
+  }
+}
+.hidden2 {
+ display: none;
+}
+.quotes {
+  position: absolute;
+  margin-top: 1rem;
+  font-size: 1.4rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #5e3e00;
+  font-family: 'Georgia', serif;
+  text-align: center;
+  padding: 0 20px;
+  width: 80%;
+  opacity: 0;
+  transition: opacity 1s ease;
+  animation: fadeIn 3s ease forwards;
+}
+.reset-btn {
+  margin-top: 1rem;
+  padding: 8px 16px;
+  font-size: 1rem;
+  cursor: pointer;
+  color: #7a5711;
+  font-weight: 700;
+  background-color: #f6e2b3;
+  border: 2px solid #b48c58;
+  border-radius: 6px;
+  opacity: 0;
+  transition: opacity 1s ease;
+  animation: fadeIn 2.5s ease forwards;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.reset-btn:hover {
+  transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+  
+  .vintage1, .vintage2, .flower1, .flower2, .stamp-img, .main-bg{
+    display: none;
+  }
+  
+  .cookie-container img {
+    width: 300px;
+    height: auto;
+    left: 100px;
+    top: 30%;
+  }
+  .scroll-paper{
+    width: 300px;
+  }
+  .quotes{
+    font-size: 10px;
+    top: 40%;
+  }
+  .reset-btn:hover{
+   transform: scale(1.1);
+  }
+}
